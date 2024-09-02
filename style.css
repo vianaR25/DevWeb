@@ -1,0 +1,84 @@
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    .profile img {
+        max-width: 100px;
+    }
+
+    .activities img {
+        max-width: 200px;
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #8C2B45;
+    color: #ffffff;
+}
+
+header {
+    background-color: #01714B;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin: 10px 0 0;
+}
+
+main {
+    padding: 20px;
+}
+
+.profile img {
+    display: flex;
+    margin: 100px auto;
+    max-width: 500px;
+    height: ;
+   
+}
+
+.profile p {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1.1em;
+}
+
+.favorites, .links, .activities {
+    margin-top: 40px;
+}
+
+ol, ul {
+    margin-left: 20px;
+}
+
+.activities .activity {
+    margin-top: 10px;
+}
+
+.activities img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+}
+
+footer {
+    background-color: #01714B;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    font-size: 0.9em;
+}
