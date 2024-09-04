@@ -24,7 +24,7 @@ body {
 header {
     background-color: #01714B;
     color: #fff;
-    padding: 20px;
+    padding: 10px;
     text-align: center;
 }
 
@@ -39,7 +39,7 @@ h2 {
 }
 
 main {
-    padding: 20px;
+    padding: 10px;
 }
 
 .profile img {
