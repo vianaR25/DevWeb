@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback para a página de perfil de Rafael Viana Domingues</title>
+    <link rel="stylesheet" href="style.css" link>
+</head>
+
+<body>
+    <header>
+        <h1>Feedback para a página de perfil de Rafael Viana Domingues</h1>
+    </header>
+
+    
+    <form>
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="source">Como você encontrou meu perfil?</label>
+            <select id="source" name="source">
+                <option value="google">Google</option>
+                <option value="social">Mídia Social</option>
+                <option value="friend">Amigo</option>
+                <option value="other">Outros</option>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <legend>Seção de Feedback</legend>
+
+            <label for="feedback">Comentários ou feedback:</label><br>
+            <textarea id="feedback" name="feedback" rows="4"></textarea><br><br>
+
+            <p>Você gostou do meu perfil?</p>
+            <input type="radio" id="yes" name="like" value="yes">
+            <label for="yes">Sim</label><br>
+            <input type="radio" id="no" name="like" value="no">
+            <label for="no">Não</label><br>
+            <input type="radio" id="maybe" name="like" value="maybe">
+            <label for="maybe">Talvez</label><br><br>
+
+            <p>O que você gostou no perfil?</p>
+            <input type="checkbox" id="design" name="feature" value="design">
+            <label for="design">Design</label><br>
+            <input type="checkbox" id="content" name="feature" value="content">
+            <label for="content">Conteúdo</label><br>
+            <input type="checkbox" id="usability" name="feature" value="usability">
+            <label for="usability">Facilidade de uso</label><br>
+            <input type="checkbox" id="other" name="feature" value="other">
+            <label for="other">Outros</label>
+        </fieldset>
+
+        <button type="submit">Enviar</button>
+        <button type="reset">Redefinir</button>
+    </form>
+
+    <section>
+        <h2>Multimídia</h2>
+
+    
+        <h3>Vídeo Favorito</h3>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/BgeEQaGjaxc" title="Vídeo do YouTube"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+
+
+        
+        <h3>Música Favorita</h3>
+        <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay"
+            src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/slayman7/seu-jorge-ze-do-caroco&color=%2365a50e&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">
+        </iframe>
+
+    </section>
+
+   
+    <footer>
+        <p>Obrigado por visitar e enviar seus comentários!</p>
+    </footer>
+</body>
+
+</html>
