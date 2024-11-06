@@ -1,0 +1,149 @@
+/* Estilo geral */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 50px;
+    padding: 10px;
+}
+
+/* Estilo do formulário */
+form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Labels e inputs */
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="file"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+/* Placeholder de telefone formatado */
+input[type="text"]::placeholder {
+    color: #aaa;
+}
+
+/* Feedback visual para campos inválidos */
+input.invalid,
+textarea.invalid,
+select.invalid {
+    border-color: #dc3545;
+    background-color: #f8d7da;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Estilo do botão */
+button[type="submit"] {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+button[type="submit"]:hover:not(:disabled) {
+    background-color: #218838;
+}
+
+/* Estilo do spinner de carregamento */
+#loadingSpinner {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 1rem;
+    color: #007bff;
+}
+
+/* Mensagem de sucesso */
+#successMessage {
+    text-align: center;
+    color: #28a745;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+/* Pré-visualização de imagem */
+#filePreview {
+    margin-top: 10px;
+    text-align: center;
+}
+
+#filePreview img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    margin-top: 10px;
+}
+
+/* Estilo do campo select */
+select {
+    appearance: none;
+    background-color: #fff;
+    padding-right: 20px;
+}
+
+/* Estilo para mensagens de erro */
+.form-group.error input,
+.form-group.error select,
+.form-group.error textarea {
+    border-color: #dc3545;
+}
+
+.form-group.error label {
+    color: #dc3545;
+}
+
+.form-group.error .error-message {
+    color: #dc3545;
+    font-size: 0.9rem;
+    margin-top: 5px;
+    display: block;
+}
