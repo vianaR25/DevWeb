@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Pokédex</h1>
+
+    <!-- Seção de busca de Pokémon por nome -->
+    <section class="search-section">
+        <h2>Pesquisar Pokemon por Nome</h2>
+        <form id="pokemon-form">
+            <input type="text" id="pokemon-name" placeholder="Nome do Pokemon" required>
+            <button type="submit">Buscar</button>
+        </form>
+        <div id="pokemon-data"></div>
+    </section>
+
+    <!-- Seção da galeria de Pokémon por tipo -->
+    <section class="gallery-section">
+        <h2>Pokemon por Tipo</h2>
+        <form id="type-form">
+            <select id="pokemon-type" required>
+                <option value="" disabled selected>Tipo De Pokemon</option>
+            </select>
+            <button type="submit">Buscar</button>
+        </form>
+        <div id="pokemon-gallery" class="gallery-grid">
+            
+        </div>
+    </section>
+
+    <!-- Seção de Pokémon por região -->
+    <section class="region-section">
+        <h2>Pokemon Por Região</h2>
+        <form id="region-form">
+            <select id="pokemon-region" required>
+                <option value="" disabled selected>Selecionar Região</option>
+            </select>
+            <button type="submit">Buscar</button>
+        </form>
+        <div id="pokemon-region-gallery" class="gallery-grid">
+            
+        </div>
+    </section>
+    <!-- Modal para exibir detalhes do Pokémon -->
+
+<div id="pokemon-modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="pokemon-card-content">
+            
+            <img id="modal-pokemon-img" alt="Pokemon Image">
+            <!-- Informações do Pokémon -->
+            <div class="pokemon-info">
+                <h2 id="modal-pokemon-name"></h2>
+                <p id="modal-pokemon-type"></p>
+                <p id="modal-pokemon-height"></p>
+                <p id="modal-pokemon-weight"></p>
+                <p id="modal-pokemon-abilities"></p>
+                <p id="modal-pokemon-stats"></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
