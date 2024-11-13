@@ -1,0 +1,232 @@
+
+/* Fontes e Cores */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary-color: #ffcb05; /* Amarelo Pokémon */
+    --secondary-color: #3b4cca; /* Azul Pokémon */
+    --background-color: #f0f0f0;
+    --text-color: #333;
+    --header-background: #ffcb05;
+}
+.header {
+    background-color: var(--header-background);
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.header-title {
+    font-size: 4rem;
+    font-weight: bold;
+    color: var(--secondary-color);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    margin: 0;
+}
+
+h2 {
+    color: var(--secondary-color);
+}
+
+
+h1 {
+    margin-top: 20px;
+}
+
+form {
+    margin: 20px auto;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+input, button, select {
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid var(--secondary-color);
+    border-radius: 5px;
+}
+
+button {
+    background-color: var(--secondary-color);
+    color: #fff;
+    cursor: pointer;
+}
+
+#pokemon-data {
+    margin-top: 20px;
+}
+
+#pokemon-data img {
+    width: 150px;
+    height: 150px;
+}
+
+/* Grid da galeria para mobile */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+/* Efeito Flip Card */
+.flip-card {
+    perspective: 1000px;
+    width: 150px;
+    height: 200px;
+    margin: auto;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Frente da carta (imagem e nome do Pokémon) */
+.flip-card-front {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Verso da carta */
+.flip-card-back {
+    background-color: #f0f0f0;
+    transform: rotateY(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flip-card-back img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Estilo do Modal */
+.modal {
+    display: none; /* Escondido por padrão */
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo transparente escuro */
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 15px;
+    width: 80%;
+    max-width: 400px;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.modal-content h2 {
+    color: var(--secondary-color);
+}
+
+.modal-content img {
+    width: 150px;
+    height: 150px;
+    border-radius: 8px;
+}
+
+.close {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* Estilos do Footer */
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: var(--header-background); /* Amarelo do Header */
+    color: var(--secondary-color); /* Azul Pokémon para o texto */
+    padding: 20px;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.footer-section {
+    flex: 1 1 30%;
+    text-align: center;
+    padding: 10px;
+}
+
+
+
+
+.footer-section.social a {
+    margin: 0 10px;
+    color: var(--secondary-color);
+    transition: color 0.3s;
+}
+
+.footer-section.social a:hover {
+    color: #a2b0f7; /* Tom mais escuro do azul para efeito hover */
+}
+
+.footer-section.social i {
+    font-size: 24px;
+}
+/* Media Queries */
+@media (min-width: 601px) {
+    /* Layout para desktop com 5 colunas e 2 linhas */
+    .gallery-grid {
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(2, auto);
+    }
+
+    /* Centraliza o conteúdo da galeria */
+    .gallery-section, .region-section, .ability-section {
+        max-width: 1200px;
+        margin: auto;
+    }
+}
