@@ -76,12 +76,12 @@ document.getElementById('pokemon-form').addEventListener('submit', async (event)
         document.getElementById('pokemon-data').innerHTML = `
             <h2>${data.name}</h2>
             <img src="${data.sprites.front_default}" alt="${data.name}">
-            <p><strong>Height:</strong> ${data.height / 10} m</p>
-            <p><strong>Weight:</strong> ${data.weight / 10} kg</p>
-            <p><strong>Type(s):</strong> ${data.types.map(t => t.type.name).join(', ')}</p>
-            <p><strong>Abilities:</strong> ${data.abilities.map(a => a.ability.name).join(', ')}</p>
-            <p><strong>Base Experience:</strong> ${data.base_experience}</p>
-            <p><strong>Stats:</strong> ${data.stats.map(s => `${s.stat.name}: ${s.base_stat}`).join(', ')}</p>
+            <p><strong>Altura:</strong> ${data.height / 10} m</p>
+            <p><strong>Peso:</strong> ${data.weight / 10} kg</p>
+            <p><strong>Tipos:</strong> ${data.types.map(t => t.type.name).join(', ')}</p>
+            <p><strong>Habilidades:</strong> ${data.abilities.map(a => a.ability.name).join(', ')}</p>
+            <p><strong>Experiência Base:</strong> ${data.base_experience}</p>
+            <p><strong>Estatísticas:</strong> ${data.stats.map(s => `${s.stat.name}: ${s.base_stat}`).join(', ')}</p>
         `;
     } else {
         document.getElementById('pokemon-data').innerHTML = '<p>Pokémon não encontrado</p>';
