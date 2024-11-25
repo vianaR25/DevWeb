@@ -210,7 +210,6 @@ document.getElementById('ability-form').addEventListener('submit', async (event)
     await Promise.all(promises);
 });
 
-// Função para resetar os formulários e limpar as áreas de exibição
 // Função para inicializar os formulários com o evento reset
 function initializeResetButtons() {
     document.getElementById("pokemon-form").addEventListener("reset", () => {
@@ -229,7 +228,7 @@ function initializeResetButtons() {
 
 // Validação do campo de busca para permitir apenas letras
 document.getElementById('pokemon-name').addEventListener('input', function () {
-    this.value = this.value.replace(/[^a-zA-Z]/g, ''); // Remove números e caracteres especiais
+    this.value = this.value.replace(/[^a-zA-Z]/g, ''); 
 });
 
 document.addEventListener("DOMContentLoaded", initializeResetButtons);

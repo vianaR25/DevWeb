@@ -137,11 +137,11 @@ button {
     margin: 5% auto;
     padding: 20px;
     border-radius: 15px;
-    border: 5px solid var(--primary-color); /* Borda amarela vibrante */
+    border: 5px solid var(--primary-color); 
     width: 80%;
     max-width: 400px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
-    font-family: 'Pokemon', Arial, sans-serif; /* Fonte personalizada se disponível */
+    font-family: 'Pokemon', Arial, sans-serif; 
     text-align: center;
     position: relative;
 }
@@ -151,7 +151,7 @@ button {
 .modal-content img {
     width: 200px;
     height: 200px;
-    border: 5px solid var(--secondary-color); /* Borda azul vibrante */
+    border: 5px solid var(--secondary-color); 
     border-radius: 8px;
     margin-bottom: 20px;
 }
@@ -189,7 +189,7 @@ button {
     color: var(--primary-color);
 }
 
-/* Efeitos de transição */
+
 .modal {
     display: none;
     position: fixed;
@@ -211,8 +211,8 @@ button {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    background-color: var(--header-background); /* Amarelo do Header */
-    color: var(--secondary-color); /* Azul Pokémon para o texto */
+    background-color: var(--header-background); 
+    color: var(--secondary-color); 
     padding: 20px;
     box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -233,7 +233,7 @@ button {
 }
 
 .footer-section.social a:hover {
-    color: #a2b0f7; /* Tom mais escuro do azul para efeito hover */
+    color: #a2b0f7; 
 }
 
 .footer-section.social i {
@@ -247,7 +247,7 @@ button {
         grid-template-rows: repeat(2, auto);
     }
 
-    /* Centraliza o conteúdo da galeria */
+    
     .gallery-section, .region-section, .ability-section {
         max-width: 1200px;
         margin: auto;
