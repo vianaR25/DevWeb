@@ -40,14 +40,16 @@ function openPokemonModal(pokemonData) {
     const modalContent = document.getElementById('pokemon-modal-content');
 
     modalContent.innerHTML = `
-        <h2>${pokemonData.name}</h2>
-        <img src="${pokemonData.sprites.front_default}" alt="${pokemonData.name}">
-        <p><strong>Height:</strong> ${pokemonData.height / 10} m</p>
-        <p><strong>Weight:</strong> ${pokemonData.weight / 10} kg</p>
-        <p><strong>Type(s):</strong> ${pokemonData.types.map(t => t.type.name).join(', ')}</p>
-        <p><strong>Abilities:</strong> ${pokemonData.abilities.map(a => a.ability.name).join(', ')}</p>
-        <p><strong>Base Experience:</strong> ${pokemonData.base_experience}</p>
-        <p><strong>Stats:</strong> ${pokemonData.stats.map(s => `${s.stat.name}: ${s.base_stat}`).join(', ')}</p>
+        <div class="modal-header">
+            <h2>${pokemonData.name}</h2>
+        </div>
+        <img src="${pokemonData.sprites.front_default}" alt="${pokemonData.name}" />
+        <p><strong>Altura:</strong> ${pokemonData.height / 10} m</p>
+        <p><strong>Peso:</strong> ${pokemonData.weight / 10} kg</p>
+        <p><strong>Tipos:</strong> ${pokemonData.types.map(t => t.type.name).join(', ')}</p>
+        <p><strong>Habilidades:</strong> ${pokemonData.abilities.map(a => a.ability.name).join(', ')}</p>
+        <p><strong>Experiência Base:</strong> ${pokemonData.base_experience}</p>
+        <p><strong>Estatísticas:</strong> ${pokemonData.stats.map(s => `${s.stat.name}: ${s.base_stat}`).join(', ')}</p>
     `;
 
     modal.style.display = 'block';
@@ -62,6 +64,7 @@ function openPokemonModal(pokemonData) {
         }
     };
 }
+
 
 // Função de busca por nome de Pokémon
 document.getElementById('pokemon-form').addEventListener('submit', async (event) => {
@@ -223,5 +226,10 @@ function initializeResetButtons() {
         document.getElementById("pokemon-ability-gallery").innerHTML = "";
     });
 }
+
+// Validação do campo de busca para permitir apenas letras
+document.getElementById('pokemon-name').addEventListener('input', function () {
+    this.value = this.value.replace(/[^a-zA-Z]/g, ''); // Remove números e caracteres especiais
+});
 
 document.addEventListener("DOMContentLoaded", initializeResetButtons);
